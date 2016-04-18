@@ -7,4 +7,6 @@ class AddSongs < ActiveRecord::Migration
       t.string :timestamps
     end
   end
+
+  
 end
