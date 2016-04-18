@@ -7,3 +7,8 @@ get '/songs' do
   @songs = Song.all
   erb :'songs/index'
 end
+
+get '/songs/new' do
+  @song = Song.new
+  erb :'songs/new'
+end
