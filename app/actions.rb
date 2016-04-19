@@ -30,3 +30,21 @@ get '/songs/:id' do
   @song = Song.find params[:id]
   erb :'songs/show'
 end
+
+get '/users/new' do
+  @user = User.new
+  erb :'users/new'
+end
+
+post '/users' do
+  @user = User.new(
+    name: params[:name],
+    email: params[:email],
+    password: params[:password]
+  )
+  if @user.save
+    redirect '/'
+  else
+    erb :'users/new'
+  end
+end
