@@ -1,12 +1,13 @@
 
-<ul>
+<!-- <ul>
 <li><a href= "/">Home</a></li>
 <li><a href= "/songs">Song List</a></li>
-<li><a href= "#">Login</a></li>
-<li><a href= "#">Signup</a></li>
-</ul>
+<li><a href= "/login">Login</a></li>
+<li><a href= "/users/new">Signup</a></li>
+</ul> -->
 
 <h1>Welcome to Share A Song!</h1>
 
-
+<% if current_user %>
 <a href="/songs/new">Share a song for free! (We promise it's legal!)</a>
+<% end %>
